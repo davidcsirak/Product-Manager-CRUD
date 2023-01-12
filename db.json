@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "David",
+      "email": "davidcsirak@yahoo.com",
+      "password": "12345678",
+      "permissions": ["USER","ADMIN"]
+    },
+    {
+      "id": 2,
+      "name": "Gipsz Jakab",
+      "email": "jakabgipsz@gmail.com",
+      "password": "87654321",
+      "permissions": ["USER"]
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Ablak",
+      "price": 600,
+      "description": "Lorem Ipsum",
+      "created_at": 1572289345
+    }
+  ]
+}

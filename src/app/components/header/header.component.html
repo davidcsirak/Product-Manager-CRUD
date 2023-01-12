@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row style="display: flex; justify-content: flex-end">
+    <div style="margin-right: auto">
+      <button *ngIf="isAuthenticated" mat-button style="margin-right: 1rem;" routerLink="/products"><span>TERMÉKEIM</span></button>
+      <button *ngIf="isAuthenticated && isUserAdmin" mat-button style="margin-right: 1rem;" routerLink="/users"><span>FELHASZNÁLÓK</span></button>
+    </div>
+    <div *ngIf="isAuthenticated">
+      <button mat-button [matMenuTriggerFor]="menu">USERNAME</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onLogOut()">Kijelentkezés</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

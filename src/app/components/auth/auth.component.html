@@ -1,0 +1,23 @@
+<form [formGroup]="authForm" (ngSubmit)="onSubmit()" class="auth-form">
+  <mat-form-field class="auth-full-width">
+    <mat-label>Email</mat-label>
+    <input id="email" formControlName="email" matInput type="text">
+    <mat-error *ngIf="authForm.controls['email'].hasError('email') && !authForm.controls['email'].hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="authForm.controls['email'].hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="auth-full-width">
+    <mat-label>Password</mat-label>
+    <input id="password" formControlName="password" matInput type="password">
+    <mat-error *ngIf="authForm.controls['password'].hasError('required')">
+      Password is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <button [disabled]="authForm.invalid" mat-raised-button color="accent" style="width: 100%" type="submit">Login</button>
+</form>
+
