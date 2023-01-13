@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   totalData: number;
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<Product>();
   isLoading = false;
 
   constructor(
@@ -115,8 +115,10 @@ export class ProductsComponent implements OnInit {
             res === null ||
             res.body === null ||
             res.headers.get('X-Total-Count') === '0'
-          )
+          ) {
+            this.isLoading = false;
             return [];
+          }
           this.totalData = +res.headers.get('X-Total-Count')!;
           this.isLoading = false;
           return res.body;
@@ -124,7 +126,7 @@ export class ProductsComponent implements OnInit {
       )
       .subscribe({
         next: (products: Product[]) => {
-          this.dataSource = new MatTableDataSource(products);
+          this.dataSource = new MatTableDataSource<Product>(products);
           this.dataSource.paginator = this.paginator;
         },
         error: () => {
@@ -162,7 +164,7 @@ export class ProductsComponent implements OnInit {
         })
       )
       .subscribe((products: Product[]) => {
-        this.dataSource = new MatTableDataSource(products);
+        this.dataSource = new MatTableDataSource<Product>(products);
       });
   }
 }

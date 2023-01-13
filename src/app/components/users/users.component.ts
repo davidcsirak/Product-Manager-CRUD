@@ -12,7 +12,7 @@ import { User } from '../../models/user.model';
 export class UsersComponent implements OnInit {
   displayedColumns: string[] = ['name', 'email', 'permissions'];
 
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<User>();
 
   constructor(private api: ApiService) {}
 
