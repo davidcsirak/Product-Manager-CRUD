@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   isUserAdmin = false;
-
+  currentUserName = '';
   private userSub: Subscription;
 
   constructor(private authService: AuthService) {}
@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.userSub = this.authService.user.subscribe((user: User | null) => {
       if (user !== null) {
         this.isAuthenticated = true;
+        this.currentUserName = user.name;
         this.isUserAdmin = user.permissions.some((p) => p === 'ADMIN');
       } else {
         this.isAuthenticated = false;

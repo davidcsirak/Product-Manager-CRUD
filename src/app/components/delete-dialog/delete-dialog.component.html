@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Termék törlése</h1>
+<div mat-dialog-content>
+  Biztosan törölni akarja a <strong>{{ productData.name }}</strong> nevű terméket?
+</div>
+<div mat-dialog-actions>
+  <button mat-button cdkFocusInitial (click)="onDeleteProduct()">Igen</button>
+  <button mat-button (click)="onCancel()">Nem</button>
+</div>

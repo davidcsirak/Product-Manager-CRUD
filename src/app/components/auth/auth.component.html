@@ -3,10 +3,10 @@
     <mat-label>Email</mat-label>
     <input id="email" formControlName="email" matInput type="text">
     <mat-error *ngIf="authForm.controls['email'].hasError('email') && !authForm.controls['email'].hasError('required')">
-      Please enter a valid email address
+      Kérem adjon meg egy valós email címet
     </mat-error>
     <mat-error *ngIf="authForm.controls['email'].hasError('required')">
-      Email is <strong>required</strong>
+      Az email megadása <strong>kötelező</strong>
     </mat-error>
   </mat-form-field>
 
@@ -14,10 +14,10 @@
     <mat-label>Password</mat-label>
     <input id="password" formControlName="password" matInput type="password">
     <mat-error *ngIf="authForm.controls['password'].hasError('required')">
-      Password is <strong>required</strong>
+      A jelszó megadása <strong>kötelező</strong>
     </mat-error>
   </mat-form-field>
 
-  <button [disabled]="authForm.invalid" mat-raised-button color="accent" style="width: 100%" type="submit">Login</button>
+  <button [disabled]="authForm.invalid" mat-raised-button color="accent" style="width: 100%" type="submit">Bejelentkezés</button>
 </form>
 

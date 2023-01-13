@@ -28,8 +28,6 @@ export class AuthComponent implements OnInit, OnDestroy {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.warn(this.authForm.value);
-
     const email: any = this.authForm.value.email;
     const password: any = this.authForm.value.password;
 
@@ -44,7 +42,7 @@ export class AuthComponent implements OnInit, OnDestroy {
   }
 
   openErrorSnackBar(message: string) {
-    this._snackBar.open(message, 'X');
+    this._snackBar.open(message, 'X', { duration: 3000 });
   }
 
   ngOnDestroy(): void {}

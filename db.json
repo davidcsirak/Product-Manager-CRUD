@@ -5,23 +5,534 @@
       "name": "David",
       "email": "davidcsirak@yahoo.com",
       "password": "12345678",
-      "permissions": ["USER","ADMIN"]
+      "permissions": [
+        "USER",
+        "ADMIN"
+      ]
     },
     {
       "id": 2,
       "name": "Gipsz Jakab",
       "email": "jakabgipsz@gmail.com",
       "password": "87654321",
-      "permissions": ["USER"]
+      "permissions": [
+        "USER"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Nagy Sándor",
+      "email": "sandor@nagy.com",
+      "password": "87654321",
+      "permissions": [
+        "USER"
+      ]
     }
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Ablak",
-      "price": 600,
-      "description": "Lorem Ipsum",
-      "created_at": 1572289345
+      "owner_id": 2,
+      "name": "jakab",
+      "price": 234,
+      "description": "adfasd",
+      "created_at": "2023-01-13T12:31:34.493Z",
+      "id": 2
+    },
+    {
+      "owner_id": 2,
+      "name": "csecs",
+      "price": 132,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:31:17.839Z",
+      "id": 1
+    },
+    {
+      "owner_id": 2,
+      "name": "jakab",
+      "price": 234,
+      "description": "adfasd",
+      "created_at": "2023-01-13T12:31:34.493Z",
+      "id": 2
+    },
+    {
+      "owner_id": 2,
+      "name": "csecs",
+      "price": 132,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:31:17.839Z",
+      "id": 1
+    },
+    {
+      "owner_id": 2,
+      "name": "jakab",
+      "price": 234,
+      "description": "adfasd",
+      "created_at": "2023-01-13T12:31:34.493Z",
+      "id": 2
+    },
+    {
+      "owner_id": 2,
+      "name": "zzz",
+      "price": 22,
+      "description": "sdsd",
+      "created_at": "2023-01-13T12:41:47.212Z",
+      "id": 4
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "name": "asdasHJ",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "owner_id": 1,
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "sd",
+      "price": 323,
+      "description": "sd",
+      "created_at": "2023-01-13T12:44:39.306Z",
+      "id": 5
+    },
+    {
+      "owner_id": 1,
+      "name": "asdas",
+      "price": 22314,
+      "description": "asdasd",
+      "created_at": "2023-01-13T12:46:46.465Z",
+      "id": 6
+    },
+    {
+      "owner_id": 1,
+      "name": "test",
+      "price": 123,
+      "description": "test",
+      "created_at": "2023-01-13T13:07:58.136Z",
+      "id": 7
+    },
+    {
+      "owner_id": 1,
+      "name": "sad",
+      "price": 213,
+      "description": "sd",
+      "created_at": "2023-01-13T13:08:22.566Z",
+      "id": 8
+    },
+    {
+      "owner_id": 1,
+      "name": "asd",
+      "price": 3241,
+      "description": "asd",
+      "created_at": "2023-01-13T13:09:18.559Z",
+      "id": 9
+    },
+    {
+      "owner_id": 1,
+      "name": "asd",
+      "price": 12312,
+      "description": "asdasd",
+      "created_at": "2023-01-13T13:09:30.566Z",
+      "id": 10
+    },
+    {
+      "owner_id": 1,
+      "name": "asda",
+      "price": 1231,
+      "description": "asdasd",
+      "created_at": "2023-01-13T13:09:39.450Z",
+      "id": 11
+    },
+    {
+      "owner_id": 1,
+      "name": "asd",
+      "price": 3124,
+      "description": "asd",
+      "created_at": "2023-01-13T13:09:54.385Z",
+      "id": 12
+    },
+    {
+      "owner_id": 1,
+      "name": "asd",
+      "price": 1234,
+      "description": "asdsd",
+      "created_at": "2023-01-13T13:13:53.329Z",
+      "id": 13
     }
   ]
 }
