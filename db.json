@@ -4,7 +4,7 @@
       "id": 1,
       "name": "David",
       "email": "davidcsirak@yahoo.com",
-      "password": "12345678",
+      "password": "fa585d89c851dd338a70dcf535aa2a92fee7836dd6aff1226583e88e0996293f16bc009c652826e0fc5c706695a03cddce372f139eff4d13959da6f1f5d3eabe",
       "permissions": [
         "USER",
         "ADMIN"
@@ -14,7 +14,7 @@
       "id": 2,
       "name": "Gipsz Jakab",
       "email": "jakabgipsz@gmail.com",
-      "password": "87654321",
+      "password": "005e408f4905098f877eab7cf97ce9f0bc706994aa759eb4aa4653cf443e45fb9a0fa831986fabc0e6afce2c243f9605acc6fd3fd4e4a8fe0d16734301f1937f",
       "permissions": [
         "USER"
       ]
@@ -23,13 +23,52 @@
       "id": 3,
       "name": "Nagy Sándor",
       "email": "sandor@nagy.com",
-      "password": "87654321",
+      "password": "11d96bb60c94adf64d728d47a5b36106ebd0f13b2bf43c8314b83cbd0709c1d57738860ef9dd9da6c035400a5708e9cde1c1dbf00350eef69ab720a9b34d1e32",
       "permissions": [
         "USER"
       ]
     }
   ],
   "products": [
-
+    {
+      "name": "asdasd",
+      "price": 4534544444444,
+      "description": "asdfsdf",
+      "created_at": "2023-01-14T20:31:08.241Z",
+      "owner_id": 1,
+      "id": 1
+    },
+    {
+      "owner_id": 1,
+      "name": "test3",
+      "price": 342,
+      "description": "asdsd",
+      "created_at": "2023-01-14T20:40:31.594Z",
+      "id": 3
+    },
+    {
+      "owner_id": 1,
+      "name": "test4",
+      "price": 345,
+      "description": "asdasd",
+      "created_at": "2023-01-14T20:41:05.813Z",
+      "id": 4
+    },
+    {
+      "owner_id": 1,
+      "name": "blabla",
+      "price": 324,
+      "description": "asdasd",
+      "created_at": "2023-01-14T20:42:29.153Z",
+      "id": 7
+    },
+    {
+      "owner_id": 1,
+      "name": "masdn",
+      "price": 534,
+      "description": "sdfsdf",
+      "created_at": "2023-01-14T20:44:11.870Z",
+      "id": 8
+    }
   ]
 }

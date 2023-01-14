@@ -5,6 +5,8 @@ import { BehaviorSubject, tap } from 'rxjs';
 import * as uuid from 'uuid';
 import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
+import * as CryptoJS from 'crypto-js';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,9 +21,10 @@ export class AuthService {
     // feltételezem hogy minden email cím egyedi
     return this.http.get<User[]>(this.apiURL + `/users?email=${email}`).pipe(
       tap((users) => {
+        const hashedInputPassw = CryptoJS.SHA512(password).toString();
         if (users.length === 0) {
           throw new Error('Nem létezik ilyen email cím!');
-        } else if (users[0].password !== password) {
+        } else if (users[0].password !== hashedInputPassw) {
           throw new Error('Helytelen jelszó!');
         } else {
           const generatedToken = uuid.v4();

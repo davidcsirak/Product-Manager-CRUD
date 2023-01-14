@@ -26,12 +26,7 @@ export class DialogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      price: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
-      description: ['', Validators.required],
-      created_at: [new Date(), Validators.required],
-    });
+    this.initForm();
 
     this.authService.user.subscribe((user) => {
       if (user) {
@@ -50,6 +45,15 @@ export class DialogComponent implements OnInit {
         this.editData.created_at
       );
     }
+  }
+
+  initForm() {
+    this.productForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      price: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      description: ['', Validators.required],
+      created_at: [new Date(), Validators.required],
+    });
   }
 
   onCreateProduct() {

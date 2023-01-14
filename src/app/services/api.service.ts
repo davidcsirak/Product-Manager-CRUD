@@ -24,6 +24,17 @@ export class ApiService {
     return this.http.delete<Product>(this.apiURL + `/products/${id}`);
   }
 
+  getAllProducts() {
+    return this.authService.user.pipe(
+      take(1),
+      exhaustMap((user) => {
+        return this.http.get<Product[]>(
+          this.apiURL + `/products?=owner_id=${user!.id}`
+        );
+      })
+    );
+  }
+
   getProductsWithPagination(pageNumber: number, pageSize: number) {
     return this.authService.user.pipe(
       take(1),

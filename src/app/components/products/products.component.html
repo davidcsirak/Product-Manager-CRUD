@@ -2,10 +2,12 @@
   <div style="margin-top: 10px;">
     <button style="margin-bottom: 10px;" mat-raised-button color="accent" (click)="openDialog()">Termék létrehozása</button>
 
-    <mat-form-field>
-      <mat-label>Keresés</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Termék neve" #input>
-    </mat-form-field>
+    <form [formGroup]="searchForm">
+      <mat-form-field>
+        <mat-label>Keresés</mat-label>
+        <input formControlName="filter" matInput (keyup)="applyFilter($event)" placeholder="Termék neve" #input>
+      </mat-form-field>
+    </form>
 
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource">
@@ -64,7 +66,7 @@
         </tr>
 
       </table>
-      <mat-spinner style="margin: 0 auto; height: 20px;" *ngIf="isLoading"></mat-spinner>
+      <mat-spinner style="margin: 0 auto; height: 20px;" *ngIf="isLoading" [value]="value"></mat-spinner>
       <mat-paginator [pageSizeOptions]="[5, 10, 15]" [length]="totalData" aria-label="Válasszon termék oldalt" style="margin-top: 1rem;"></mat-paginator>
     </div>
   </div>
